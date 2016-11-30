@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>AngularJS Events</title>
 </head>
 <body>
+    <div ng-controller="MessageController">
+        <h4>Messages :</h4>
+        <ul>
+            <li ng-repeat="message in messages">
+                {{message.text}}
+            </li>
+
+        </ul>
+        <div ng-controller="StatsController">
+            <h4>Stats:</h4>
+            <div>{{message.length}} Messages(s)</div>
+            <div>Status:<span style="color:{{statusColor}}">{{status}}</span> </div>
+        </div>
+    </div>
 
 </body>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="modules/events/event.client.module.js"></script>
+    <script src="modules/events/controllers/message.client.controller.js"></script>
+    <script src="modules/events/controllers/stats.client.controller.js"></script>
+
+    <script src="modules/core/core.client.modules.js"></script>
+    <script src="modules/core/controllers/book.client.controller.js"></script>
+    <script src="modules/core/controllers/site.client.controller.js"></script>
 </html>

@@ -3,10 +3,13 @@
  */
 'use strict';
 
-angular.module('myApp',['core']);
+angular.module('myApp',[
+    'core',
+    'Events'
+]);
 
-angular.module('myApp').run(function($rootScope){
-   $rootScope.title='Famous Books';
-    $rootScope.name="Root Scope";
-});
+//angular.module('myApp').run(function($rootScope){
+//   $rootScope.title='Famous Books';
+//    $rootScope.name="Root Scope";
+//});
 
