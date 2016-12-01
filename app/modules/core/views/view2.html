@@ -1,1 +1,16 @@
 <p>from view 2: {{now | date:'medium'}}</p>
+<p>
+    <!--From view 2-->
+    <!--<ul>-->
+        <!--<li>First Name: {{firstname}}</li>-->
+        <!--<li>Last Name: {{lastname}}</li>-->
+    <!--</ul>-->
+    <!--Our additional users are-->
+    <!--<ul>-->
+        <!--<li ng-repeat="name in names">-->
+            <!--{{name}}-->
+        <!--</li>-->
+    <!--</ul>-->
+    <div ng-include="'modules/core/views/selected-user.html'"></div>
+    <div ng-include="'modules/core/views/all-users.html'"></div>
+</p>
